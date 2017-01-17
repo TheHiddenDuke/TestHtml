@@ -6,7 +6,7 @@
  * Time: 11:00
  */
 session_start();
-if(!$mysqli-> session_is_registered(myusername)){
+if(!$mysqli-> session_is_registered($myusername)){
     header("location:main_login.php");
 }
 ?>
