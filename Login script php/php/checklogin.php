@@ -24,7 +24,7 @@ $fields_error = "";
             echo "feil";
             $fields_error1 = "Password is required";
         }else {
-            $password = $_POST['password'];
+            $password = sha1(md5($_POST['password']));
         }
 
         if(empty($fields_error) && empty($fields_error1))
@@ -42,9 +42,11 @@ $fields_error = "";
 
             if($data){
                 $_SESSION["username"] = $username;
+                $_SESSION[$mysqli];
+
                 echo htmlspecialchars(strip_tags($_POST['username']), ENT_QUOTES, 'UTF-8');
 
-                header("location:velkomen.html");
+                header("location:mainpage.php");
                 
             }else {
 

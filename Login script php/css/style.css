@@ -1,3 +1,15 @@
 body{
-    background-color: black;
+    background-color: white;
+}
+.checkboxlist{
+
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: 0;
+    border-left: solid black;
+    border-right: solid black;
+}
+#style{
+
+    color: black;
 }
