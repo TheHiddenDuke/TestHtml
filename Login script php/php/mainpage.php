@@ -12,9 +12,8 @@ session_start();
 $mysqli = new mysqli("localhost", "root", "heihei", "innlogging")or die("cannot connect");
 $result = $mysqli -> query("SELECT itemname FROM items");
 
-$name = $result ->fetch_assoc();
-
 while( $name = mysqli_fetch_assoc($result)):
+
 ?>
     <div class="checkboxlist">
 
