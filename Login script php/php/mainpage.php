@@ -17,13 +17,20 @@ if (isset($_SESSION['isloggedin']) && $_SESSION['isloggedin'] == true) {
 ?>
     <html>
 <body>
-<table width="300" border="0" align="right" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<table width="300"  border="1" align="right" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
             <td>
                 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
                     <tr>
-                        <td colspan="3" align="center"><font size="8"> You are logged in </font></td>
+                        <td colspan="3" align="center"><font size="6"> You are logged in </font></td>
                     </tr>
+                    <form name="form1" method="post" action="logout.php">
+                    <tr>
+                        <td width="78">Logout?</td>
+                        <td width="6">:</td>
+                        <td width="294"><input type="submit" name="Logout" value="Logout"></td>
+                    </tr>
+                    </form>
                 </table>
             </td>
     </tr>
@@ -73,36 +80,21 @@ if (isset($_SESSION['isloggedin']) && $_SESSION['isloggedin'] == true) {
 
 $mysqli = new mysqli("localhost", "root", "heihei", "innlogging")or die("cannot connect");
 $result = $mysqli -> query("SELECT itemname FROM items");
-
+?>
+<div class="checkboxlist">
+<?php
 while( $name = mysqli_fetch_assoc($result)):
-
 ?>
 
-    <div class="checkboxlist">
+
         <input type="checkbox" name="itemname[]" value=" <?php echo $name['itemname']; ?> "/>
         <span id="style"> <?php echo $name['itemname']; ?></span><br>
-    </div>
+
 
 <?php endwhile; ?>
+</div>
 <?php
-$_SESSION['isloggedin'] = false;
+
+//$_SESSION['isloggedin'] = false;
+
 ?>
-
-
-
-
-
-<html>
-<header>
-
-</header>
-<body>
-
-</body>
-
-
-
-<footer>
-
-</footer>
-</html>

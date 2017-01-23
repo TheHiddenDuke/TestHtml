@@ -3,10 +3,11 @@ body{
 }
 .checkboxlist{
 
-    max-width: 100px;
+    max-width: 300px;
     margin-left: auto;
     margin-right: 0;
-    border: 50px solid black;
+    margin-top: 5%;
+    border: 1px solid black;
 }
 #style{
 
