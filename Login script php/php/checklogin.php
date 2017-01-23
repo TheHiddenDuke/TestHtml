@@ -50,7 +50,7 @@ $fields_error = "";
                 
             }else {
 
-                header("location:main_php.php");
+                header("location:login_page.php");
                 $error = "OOOPS..Username or Password is wrong!!!";
             }
 
