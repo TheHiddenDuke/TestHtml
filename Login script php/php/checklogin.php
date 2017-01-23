@@ -42,6 +42,7 @@ $fields_error = "";
 
             if($data){
                 $_SESSION["username"] = $username;
+                $_SESSION["isloggedin"] = true;
                 $_SESSION[$mysqli];
 
                 echo htmlspecialchars(strip_tags($_POST['username']), ENT_QUOTES, 'UTF-8');
@@ -50,7 +51,7 @@ $fields_error = "";
                 
             }else {
 
-                header("location:login_page.php");
+                header("location:mainpage.php");
                 $error = "OOOPS..Username or Password is wrong!!!";
             }
 
