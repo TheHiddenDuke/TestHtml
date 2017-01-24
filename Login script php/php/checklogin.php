@@ -13,16 +13,17 @@ $fields_error = "";
     {
         if(empty($_POST['username']) || trim($_POST['username']) =="" )
         {
-            echo "feil";
             $fields_error= "Username is required";
+            header("location:mainpage.php");
         }else {
             $username=htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
         }
 
         if(empty($_POST['password'])  || trim($_POST['password']) =='' )
         {
-            echo "feil";
             $fields_error1 = "Password is required";
+            header("location:mainpage.php");
+
         }else {
             $password = sha1(md5($_POST['password']));
         }

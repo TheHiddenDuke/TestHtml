@@ -10,6 +10,17 @@ body{
     border: 1px solid black;
 }
 #style{
+    float: right;
+}
+#rightWrapper {
+    float:right;
+}
+#rightTop {
+    width: 100%;
+    height: 110px;
+}
 
-    color: black;
+#rightBottom {
+    width: 100%;
+    height: 100px;
 }

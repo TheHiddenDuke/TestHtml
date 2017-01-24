@@ -17,7 +17,8 @@ if (isset($_SESSION['isloggedin']) && $_SESSION['isloggedin'] == true) {
 ?>
     <html>
 <body>
-<table width="300"  border="1" align="right" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<table width="300" id="rightWrapper" border="1"  cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+    <div id="rightTop">
     <tr>
             <td>
                 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
@@ -34,6 +35,7 @@ if (isset($_SESSION['isloggedin']) && $_SESSION['isloggedin'] == true) {
                 </table>
             </td>
     </tr>
+    </div>
 </table>
 </body>
 </html>
@@ -80,19 +82,41 @@ if (isset($_SESSION['isloggedin']) && $_SESSION['isloggedin'] == true) {
 
 $mysqli = new mysqli("localhost", "root", "heihei", "innlogging")or die("cannot connect");
 $result = $mysqli -> query("SELECT itemname FROM items");
+
+    //checkbox list
 ?>
-<div class="checkboxlist">
+
+    <form method="post" id="shoppinglist" action="buypage.php">
+
+        <table id="rightWrapper" width="300" cellpadding="0" cellspacing="1" border="1">
+<div id="rightBottom">
+            <tr><td>
+    <strong>Shopping:</strong><br>
+
+
+
+
+
 <?php
+
+
+
 while( $name = mysqli_fetch_assoc($result)):
 ?>
 
 
         <input type="checkbox" name="itemname[]" value=" <?php echo $name['itemname']; ?> "/>
-        <span id="style"> <?php echo $name['itemname']; ?></span><br>
+         <?php echo $name['itemname']; ?><br>
 
 
 <?php endwhile; ?>
+                <input type="submit" name="submit" value="checkout">
+        </td>
+</tr>
 </div>
+        </table>
+
+    </form>
 <?php
 
 //$_SESSION['isloggedin'] = false;
