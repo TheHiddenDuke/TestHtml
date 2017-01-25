@@ -7,59 +7,56 @@
  */
 session_start();
 $fields_error = "";
-    $fields_error1 = "";
-    $error = "";
-    if(isset($_POST['Submit']))
-    {
-        if(empty($_POST['username']) || trim($_POST['username']) =="" )
-        {
-            $fields_error= "Username is required";
-            header("location:mainpage.php");
-        }else {
-            $username=htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
-        }
-
-        if(empty($_POST['password'])  || trim($_POST['password']) =='' )
-        {
-            $fields_error1 = "Password is required";
-            header("location:mainpage.php");
-
-        }else {
-            $password = sha1(md5($_POST['password']));
-        }
-
-        if(empty($fields_error) && empty($fields_error1))
-        {
-            $mysqli = new mysqli("localhost", "root", "heihei", "innlogging")or die("cannot connect");
-
-
-            $result = $mysqli -> query ("SELECT * FROM users WHERE username='$username' AND pass='$password'");
-
-
-
-            $data = $result -> num_rows;
-
-
-
-            if($data){
-                $_SESSION["username"] = $username;
-                $_SESSION["isloggedin"] = true;
-                $_SESSION[$mysqli];
-
-                echo htmlspecialchars(strip_tags($_POST['username']), ENT_QUOTES, 'UTF-8');
-
-                header("location:mainpage.php");
-                
-            }else {
-
-                header("location:mainpage.php");
-                $error = "OOOPS..Username or Password is wrong!!!";
-            }
-
-        $mysqli -> close();
-        }
-
+$fields_error1 = "";
+$error = "";
+if(isset($_POST['Register'])){
+    header("location:register.php");
+}
+if (isset($_POST['Submit'])) {
+    if (empty($_POST['username']) || trim($_POST['username']) == "") {
+        $fields_error = "Username is required";
+        header("location:mainpage.php");
+    } else {
+        $username = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
     }
+
+    if (empty($_POST['password']) || trim($_POST['password']) == '') {
+        $fields_error1 = "Password is required";
+        header("location:mainpage.php");
+
+    } else {
+        $password = sha1(md5($_POST['password']));
+    }
+
+    if (empty($fields_error) && empty($fields_error1)) {
+        $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
+
+
+        $result = $mysqli->query("SELECT * FROM users WHERE username='$username' AND pass='$password'");
+
+
+        $data = $result->num_rows;
+
+
+        if ($data) {
+            $_SESSION["username"] = $username;
+            $_SESSION["isloggedin"] = true;
+            $_SESSION[$mysqli];
+
+            echo htmlspecialchars(strip_tags($_POST['username']), ENT_QUOTES, 'UTF-8');
+
+            header("location:mainpage.php");
+
+        } else {
+
+            header("location:mainpage.php");
+            $error = "OOOPS..Username or Password is wrong!!!";
+        }
+
+        $mysqli->close();
+    }
+
+}
 
 
 ?>
