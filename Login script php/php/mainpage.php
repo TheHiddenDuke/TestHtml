@@ -95,10 +95,11 @@ $result = $mysqli->query("SELECT itemname FROM items");
                         <strong>Shopping:</strong><br>
                         <?php
                         while ($name = mysqli_fetch_assoc($result)):
+                            $truename = $name['itemname'];
                             ?>
 
-                            <input type="checkbox" name="itemname[]" value=" <?php echo $name['itemname']; ?> "/>
-                            <?php echo $name['itemname']; ?><br>
+                            <input type="checkbox" name="<?php echo htmlspecialchars($truename, ENT_QUOTES, 'UTF-8')?>" value="true"/>
+                            <?php echo $truename; ?><br>
 
                         <?php endwhile; ?>
                         <input type="submit" name="submit" value="checkout">
