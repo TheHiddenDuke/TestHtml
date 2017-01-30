@@ -16,7 +16,7 @@ if ($_POST['password'] != $_POST['passrep']){
 }
 
 
-if (isset($_POST['username']) && $_POST['password'] && $_POST['email'] && $_POST['passrep'] && $_POST['register']){
+if ($_POST['username'] != "" && $_POST['password'] != "" && $_POST['email'] != "" && $_POST['passrep'] != "" && isset($_POST['register'])){
 
     $mysqli_reg = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
 
@@ -25,14 +25,17 @@ if (isset($_POST['username']) && $_POST['password'] && $_POST['email'] && $_POST
     $pass = sha1(md5($_POST['password']));
 
     $conn = "INSERT INTO users (`id`, `username`, `email`, `pass`,`isloggedin`) VALUES (NULL, '$username', '$email', '$pass','0')";
-
+echo "feil";
     $result = $mysqli_reg ->query($conn);
     if(isset($result)){
         $mysqli_reg ->close();
         header("location:mainpage.php");
     }
     else{
-        header("location:register.php");
+        //header("location:register.php");
     }
 
+}
+else{
+header("location:register.php");
 }
