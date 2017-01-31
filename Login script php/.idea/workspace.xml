@@ -5,8 +5,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/adminsite.php" afterPath="$PROJECT_DIR$/php/adminsite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/checkboxlist.php" afterPath="$PROJECT_DIR$/php/checkboxlist.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/mainpage.php" afterPath="$PROJECT_DIR$/php/mainpage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/membersite.php" afterPath="$PROJECT_DIR$/php/membersite.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/notloggedin.php" afterPath="$PROJECT_DIR$/php/notloggedin.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,10 +25,10 @@
       <file leaf-file-name="mainpage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/mainpage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            <state relative-caret-position="289">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
-                <marker date="1485780167648" expanded="true" signature="815:841" ph="SELECT itemn... items" />
+                <marker date="1485858896806" expanded="true" signature="693:719" ph="SELECT itemn... items" />
               </folding>
             </state>
           </provider>
@@ -45,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="78" column="18" lean-forward="false" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+            <state relative-caret-position="484">
+              <caret line="72" column="21" lean-forward="false" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -58,11 +59,11 @@
       <file leaf-file-name="notloggedin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/notloggedin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="7" lean-forward="false" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+            <state relative-caret-position="323">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#6#88#0#PHP" expanded="true" />
-                <element signature="e#1029#1035#1#HTML" expanded="true" />
+                <element signature="e#1224#1230#1#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,8 +72,8 @@
       <file leaf-file-name="membersite.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/membersite.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+            <state relative-caret-position="289">
+              <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
               <folding>
                 <element signature="e#6#88#0#PHP" expanded="true" />
               </folding>
@@ -80,24 +81,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminsite.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="adminsite.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/adminsite.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+              <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
               <folding>
                 <element signature="e#6#88#0#PHP" expanded="true" />
-                <marker date="1485858236577" expanded="true" signature="141:1228" ph="..." />
-                <marker date="1485858236577" expanded="true" signature="214:261" ph="..." />
-                <marker date="1485858236577" expanded="true" signature="272:1216" ph="..." />
-                <marker date="1485858236577" expanded="true" signature="297:309" ph="..." />
-                <marker date="1485858236577" expanded="true" signature="483:1198" ph="..." />
-                <marker date="1485858236577" expanded="true" signature="495:1186" ph="..." />
-                <marker date="1485858236577" expanded="true" signature="512:1172" ph="..." />
-                <marker date="1485858236577" expanded="true" signature="610:1154" ph="..." />
-                <marker date="1485858236577" expanded="true" signature="635:763" ph="..." />
-                <marker date="1485858236577" expanded="true" signature="837:1129" ph="..." />
-                <marker date="1485858236577" expanded="true" signature="866:1101" ph="..." />
+                <marker date="1485859135299" expanded="true" signature="141:1207" ph="..." />
+                <marker date="1485859135299" expanded="true" signature="214:261" ph="..." />
+                <marker date="1485859135299" expanded="true" signature="272:1195" ph="..." />
+                <marker date="1485859135299" expanded="true" signature="297:309" ph="..." />
+                <marker date="1485859135299" expanded="true" signature="462:1177" ph="..." />
+                <marker date="1485859135299" expanded="true" signature="474:1165" ph="..." />
+                <marker date="1485859135299" expanded="true" signature="491:1151" ph="..." />
+                <marker date="1485859135299" expanded="true" signature="589:1133" ph="..." />
+                <marker date="1485859135299" expanded="true" signature="614:742" ph="..." />
+                <marker date="1485859135299" expanded="true" signature="816:1108" ph="..." />
+                <marker date="1485859135299" expanded="true" signature="845:1080" ph="..." />
               </folding>
             </state>
           </provider>
@@ -191,13 +192,13 @@
         <option value="$PROJECT_DIR$/php/register.php" />
         <option value="$PROJECT_DIR$/php/checkregister.php" />
         <option value="$PROJECT_DIR$/php/checklogin.php" />
-        <option value="$PROJECT_DIR$/php/membersite.php" />
-        <option value="$PROJECT_DIR$/php/notloggedin.php" />
-        <option value="$PROJECT_DIR$/php/mainpage.php" />
         <option value="$PROJECT_DIR$/html/Velkomen.html" />
         <option value="$PROJECT_DIR$/php/checkboxlist.php" />
-        <option value="$PROJECT_DIR$/php/adminsite.php" />
+        <option value="$PROJECT_DIR$/php/mainpage.php" />
+        <option value="$PROJECT_DIR$/php/notloggedin.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/php/membersite.php" />
+        <option value="$PROJECT_DIR$/php/adminsite.php" />
       </list>
     </option>
   </component>
@@ -363,7 +364,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1484298389833</updated>
-      <workItem from="1484298391034" duration="61473000" />
+      <workItem from="1484298391034" duration="62225000" />
     </task>
     <task id="LOCAL-00001" summary="Login Success">
       <created>1484644265993</created>
@@ -491,11 +492,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485779807440</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Moved styling to css file">
+      <created>1485858425027</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1485858425027</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61473000" />
+    <option name="totallyTimeSpent" value="62225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -535,7 +543,8 @@
     <MESSAGE value="Shopping works" />
     <MESSAGE value="Fixed register (could register empty)" />
     <MESSAGE value="Fixed register (could register empty)&#10;Split into files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed register (could register empty)&#10;Split into files" />
+    <MESSAGE value="Moved styling to css file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved styling to css file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -689,27 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/notloggedin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="7" lean-forward="false" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-          <folding>
-            <element signature="e#6#88#0#PHP" expanded="true" />
-            <element signature="e#1029#1035#1#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/membersite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="e#6#88#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/Velkomen.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -720,10 +708,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/mainpage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        <state relative-caret-position="289">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <marker date="1485780167648" expanded="true" signature="815:841" ph="SELECT itemn... items" />
+            <marker date="1485858896806" expanded="true" signature="693:719" ph="SELECT itemn... items" />
           </folding>
         </state>
       </provider>
@@ -738,32 +726,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/adminsite.php">
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="72" column="21" lean-forward="false" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/notloggedin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#6#88#0#PHP" expanded="true" />
-            <marker date="1485858236577" expanded="true" signature="141:1228" ph="..." />
-            <marker date="1485858236577" expanded="true" signature="214:261" ph="..." />
-            <marker date="1485858236577" expanded="true" signature="272:1216" ph="..." />
-            <marker date="1485858236577" expanded="true" signature="297:309" ph="..." />
-            <marker date="1485858236577" expanded="true" signature="483:1198" ph="..." />
-            <marker date="1485858236577" expanded="true" signature="495:1186" ph="..." />
-            <marker date="1485858236577" expanded="true" signature="512:1172" ph="..." />
-            <marker date="1485858236577" expanded="true" signature="610:1154" ph="..." />
-            <marker date="1485858236577" expanded="true" signature="635:763" ph="..." />
-            <marker date="1485858236577" expanded="true" signature="837:1129" ph="..." />
-            <marker date="1485858236577" expanded="true" signature="866:1101" ph="..." />
+            <element signature="e#1224#1230#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/php/membersite.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="78" column="18" lean-forward="false" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="289">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding>
+            <element signature="e#6#88#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/adminsite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding>
+            <element signature="e#6#88#0#PHP" expanded="true" />
+            <marker date="1485859135299" expanded="true" signature="141:1207" ph="..." />
+            <marker date="1485859135299" expanded="true" signature="214:261" ph="..." />
+            <marker date="1485859135299" expanded="true" signature="272:1195" ph="..." />
+            <marker date="1485859135299" expanded="true" signature="297:309" ph="..." />
+            <marker date="1485859135299" expanded="true" signature="462:1177" ph="..." />
+            <marker date="1485859135299" expanded="true" signature="474:1165" ph="..." />
+            <marker date="1485859135299" expanded="true" signature="491:1151" ph="..." />
+            <marker date="1485859135299" expanded="true" signature="589:1133" ph="..." />
+            <marker date="1485859135299" expanded="true" signature="614:742" ph="..." />
+            <marker date="1485859135299" expanded="true" signature="816:1108" ph="..." />
+            <marker date="1485859135299" expanded="true" signature="845:1080" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

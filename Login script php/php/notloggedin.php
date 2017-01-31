@@ -7,11 +7,22 @@
  */
 
 ?>
-
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<header>
+    <title>Hello and welcome</title>
+</header>
 <body>
-<table width="300" border="1" align="right" cellpadding="0" cellspacing="1" bgcolor="red">
+<div class="banner">
+
+</div>
+
+
+<h1>Welcome to this wonderful site, please log in!</h1>
+
+<div class="rightWrapper">
+    <div class="loginbox">
     <tr>
         <form name="form1" method="post" action="checklogin.php">
             <td>
@@ -35,12 +46,14 @@
                         <td><input type="submit" name="Submit" value="Login">
                             <input type="submit" name="Register" value="Register">
                         </td>
+                    </tr>
+                </table>
+            </td>
         </form>
     </tr>
-</table>
-</td>
-</form>
-</tr>
-</table>
+</div>
+</div>
+
+
 </body>
 </html>

@@ -17,7 +17,7 @@
     <div class="banner">
 
     </div>
-    <hr  color="#ed4e4e">
+    
     <?php
     echo "Welcome, " . $_SESSION['username'] . ", to administrative site!";
     ?>

@@ -15,13 +15,12 @@ if (isset($_SESSION['isloggedin']) && $_SESSION['isloggedin'] == true && $_SESSI
     include 'adminsite.php';
 
 } else if (isset($_SESSION['isloggedin']) && $_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 0) {
-    echo "Welcome to the member's area, " . $_SESSION['username'] . "!";
 
     include 'membersite.php';
 
     //If user is not logged in
 } else{
-    echo "Please log in first to see this page.";
+
 
     include 'notloggedin.php';
 

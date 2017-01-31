@@ -6,11 +6,26 @@
  * Time: 13:32
  */
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<header>
+    <title>Hello and welcome</title>
+</header>
+<body>
+<div class="banner">
+
+</div>
+
+
+<?php
+echo "Welcome, " . $_SESSION['username'] . ", to administrative site!";
+?>
 
 <!-- Login box-->
-    <html>
-    <body>
-    <table width="300" align="right" border="1" cellpadding="0" cellspacing="1" bgcolor="red">
+
+    <div class="rightWrapper">
+        <div class="loginbox">
         <tr>
             <td>
                 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
@@ -28,6 +43,6 @@
             </td>
         </tr>
         </div>
-    </table>
+    </div>
     </body>
     </html>
