@@ -5,12 +5,24 @@
  * Date: 30/01/2017
  * Time: 13:31
  */
-
 ?>
 <!-- Login box-->
-    <html>
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<header>
+    <title>Hello and welcome</title>
+</header>
     <body>
-    <table width="300" align="right" border="1" cellpadding="0" cellspacing="1" bgcolor="red">
+    <div class="banner">
+
+    </div>
+    <hr  color="#ed4e4e">
+    <?php
+    echo "Welcome, " . $_SESSION['username'] . ", to administrative site!";
+    ?>
+<div class="rightWrapper">
+    <div class="loginbox">
         <tr>
             <td>
                 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
@@ -27,7 +39,7 @@
                 </table>
             </td>
         </tr>
-        </div>
-    </table>
+    </div>
+</div>
     </body>
     </html>

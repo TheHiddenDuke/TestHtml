@@ -11,7 +11,6 @@
 session_start();
 //If user is logged in
 if (isset($_SESSION['isloggedin']) && $_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
-    echo "Welcome, " . $_SESSION['username'] . ", to administrative site!";
 
     include 'adminsite.php';
 
@@ -28,7 +27,7 @@ if (isset($_SESSION['isloggedin']) && $_SESSION['isloggedin'] == true && $_SESSI
 
 }
 
-
+//Query after item name and values
 $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
 $result = $mysqli->query("SELECT itemname FROM items");
 
