@@ -42,8 +42,13 @@ if (isset($_POST['Submit'])) {
             $_SESSION["username"] = $username;
             $_SESSION["isloggedin"] = true;
             $_SESSION[$mysqli];
-            if($result = $mysqli ->query("SELECT * FROM users WHERE username='$username' AND pass='$password' AND isadmin='1'")){
+            $result2 = $mysqli ->query("SELECT * FROM users WHERE username='$username' AND pass='$password' AND isadmin='1'");
+            $data2 = $result2 -> num_rows;
+            if($data2){
                 $_SESSION["isadmin"] = 1;
+            }
+            else{
+                $_SESSION["isadmin"] = 0;
             }
 
             echo htmlspecialchars(strip_tags($_POST['username']), ENT_QUOTES, 'UTF-8');

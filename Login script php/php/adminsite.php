@@ -17,7 +17,6 @@
     <div class="banner">
 
     </div>
-    
     <?php
     echo "Welcome, " . $_SESSION['username'] . ", to administrative site!";
     ?>

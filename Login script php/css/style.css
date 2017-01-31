@@ -52,6 +52,7 @@ body{
 #style{
     float: right;
 }
+
 .rightWrapper {
     margin-right: 0px;
     margin-left:auto;
@@ -82,7 +83,7 @@ body{
 }
 
 .banner{
-    background-image: url("../images/header.jpg");
+   /* background-image: url("../images/header.jpg");*/
     background-position: bottom;
     background-size: cover;
     background-repeat: repeat, no-repeat;

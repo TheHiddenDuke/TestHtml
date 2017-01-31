@@ -10,11 +10,11 @@
 <?php
 session_start();
 //If user is logged in
-if (isset($_SESSION['isloggedin']) && $_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
+if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
 
     include 'adminsite.php';
 
-} else if (isset($_SESSION['isloggedin']) && $_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 0) {
+} else if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 0) {
 
     include 'membersite.php';
 

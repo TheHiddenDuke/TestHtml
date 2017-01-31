@@ -19,7 +19,7 @@
 
 
 <?php
-echo "Welcome, " . $_SESSION['username'] . ", to administrative site!";
+echo "Welcome, " . $_SESSION['username'] . ", to the membership site!";
 ?>
 
 <!-- Login box-->
