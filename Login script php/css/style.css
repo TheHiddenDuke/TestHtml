@@ -54,13 +54,12 @@ body{
 }
 
 .rightWrapper {
-    margin-right: 0px;
+    margin-right: 30px;
     margin-left:auto;
     margin-top: -17px;
     width: 300px;
-    border-left: solid 1px;
     border-right: solid 1px;
-    border-color: #ed4e4e;
+    border-color: #f2f2f2;
 }
 .rightTop {
     width: 100%;
@@ -68,16 +67,31 @@ body{
 }
 
 .rightBottom {
-    border-bottom: solid 1px;
-    border-top:solid 1px;
-    border-color: #ed4e4e;
-    margin-top: 17px;
+    margin: 1em 0px;
+    padding: 10px;
+    border: 2px solid #555;
+    background-color: #f2f2f2;
+    color: black;
+    font-size: 140%;
+    text-align: justify;
+
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+
     width: 100%;
 
 }
 .loginbox{
-    border-top: solid 1px;
-    border-color: #ed4e4e;
+    margin: 1em 0px;
+    padding: 10px;
+    border: 2px solid #555;
+    background-color: #f2f2f2;
+    color: black;
+    font-size: 140%;
+    text-align: justify;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+
     width: 100%;
 
 }
@@ -92,3 +106,14 @@ body{
     width: 100%
 
 }
+
+.blockquote {
+    margin: 1em 20px;
+    padding: 10px;
+    border: 2px solid #555;
+    background-color: #f2f2f2;
+    color: #555;
+    font-size: 140%;
+    text-align: justify;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px; }

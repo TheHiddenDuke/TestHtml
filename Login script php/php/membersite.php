@@ -28,7 +28,7 @@ echo "Welcome, " . $_SESSION['username'] . ", to the membership site!";
         <div class="loginbox">
         <tr>
             <td>
-                <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+                <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#f2f2f2">
                     <tr>
                         <td colspan="3" align="center"><font size="6"> You are logged in </font></td>
                     </tr>
