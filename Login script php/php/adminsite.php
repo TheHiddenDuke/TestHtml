@@ -15,11 +15,13 @@
 </header>
     <body>
     <div class="banner">
-
     </div>
+
+    <div class="text">
     <?php
     echo "Welcome, " . $_SESSION['username'] . ", to administrative site!";
     ?>
+    </div>
 <div class="rightWrapper">
     <div class="loginbox">
         <tr>

@@ -93,27 +93,56 @@ body{
     -webkit-border-radius: 10px;
 
     width: 100%;
-
 }
-
-.banner{
-   /* background-image: url("../images/header.jpg");*/
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: repeat, no-repeat;
-    border-bottom: solid 1px #ed4e4e;
-    height: 140px;
-    width: 100%
-
-}
-
-.blockquote {
-    margin: 1em 20px;
+.registerbox{
     padding: 10px;
     border: 2px solid #555;
     background-color: #f2f2f2;
-    color: #555;
+    color: black;
     font-size: 140%;
     text-align: justify;
     -moz-border-radius: 10px;
-    -webkit-border-radius: 10px; }
+    -webkit-border-radius: 10px;
+    margin-top: 25px;
+    width: 100%;
+
+}
+.centerdiv{
+    max-width: 325px;
+    width: 100%;
+    margin:0 auto;
+}
+
+.banner{
+    background-image: url("../images/header.jpg");
+    background-position: 0 240px;
+    background-size: cover;
+    background-repeat: repeat, no-repeat;
+    height: 140px;
+    width: 100%;
+    box-shadow: 0 0 10px 5px black;
+}
+
+hr.style-five {
+    border: 0;
+    height: 0;
+    box-shadow: 0 0 10px 1px black;
+}
+hr.style-five:after {
+    content: "\00a0";
+}
+
+.text{
+    width:1000px;
+    text-align: center;
+    float: left;
+    font-size:200%;
+
+    margin: 1em 14%;
+    padding: 10px;
+    border: 2px solid #555;
+    background-color: #f2f2f2;
+    color: black;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}

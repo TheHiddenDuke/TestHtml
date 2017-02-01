@@ -17,9 +17,11 @@
 <div class="banner">
 
 </div>
+<hr class="style-five">
 
-
+<div class="text">
 <h1>Welcome to this wonderful site, please log in!</h1>
+</div>
 
 <div class="rightWrapper">
     <div class="loginbox">

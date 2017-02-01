@@ -6,11 +6,16 @@
  * Time: 12:34
  */
 ?>
-<table width="325" border="1" align="center" cellpadding="0" cellspacing="1" bgcolor="red">
-    <tr>
+<link rel="stylesheet" href="../css/style.css">
+
+<div class="banner">
+
+</div>
+<div class="centerdiv">
+<div class="registerbox">
         <form name="form1" method="post" action="checkregister.php">
-            <td>
-                <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+
+                <table width="200px" border="0" cellpadding="3" cellspacing="1" bgcolor="#f2f2f2">
                     <tr>
                         <td colspan="3"><strong>Member Register </strong></td>
                     </tr>
@@ -25,14 +30,14 @@
                         <td><input name="password" type="password" id="password"></td>
                     </tr>
                     <tr>
-                        <td width="700">Repeat password</td>
+                        <td width="700">Repeat</td>
                         <td>:</td>
                         <td><input name="passrep" type="password" id="passrep"></td>
                     </tr>
                     <tr>
                         <td>Email</td>
                         <td>:</td>
-                        <td><input name="email" type="text" id="email"</td>
+                        <td><input name="email" type="email" id="email"</td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
@@ -41,6 +46,9 @@
                             <input type="submit" name="abort" value="Abort">
 
                         </td>
+                    </tr>
+                </table>
+
         </form>
-    </tr>
-</table>
+</div>
+</div>

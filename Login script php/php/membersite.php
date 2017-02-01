@@ -16,12 +16,12 @@
 <div class="banner">
 
 </div>
-
-
+<hr class="style-five">
+<div class="text">
 <?php
 echo "Welcome, " . $_SESSION['username'] . ", to the membership site!";
 ?>
-
+</div>
 <!-- Login box-->
 
     <div class="rightWrapper">
