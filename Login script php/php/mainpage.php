@@ -1,12 +1,12 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Jarand
- * Date: 17/01/2017
- * Time: 10:57
- */
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+</body>
+</html>
 <?php
 session_start();
 //If user is logged in
@@ -27,12 +27,14 @@ if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
 }
 
 //Query after item name and values
+
 $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
 $result = $mysqli->query("SELECT itemname FROM items");
-
-
 //Checkbox list
 
 include 'checkboxlist.php';
 
+$mysqli->close();
+
+include 'footer.php';
 ?>

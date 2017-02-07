@@ -9,6 +9,8 @@ session_start();
 $fields_error = "";
 $fields_error1 = "";
 $error = "";
+$mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
+
 if(isset($_POST['Register'])){
     header("location:register.php");
 }
@@ -17,7 +19,7 @@ if (isset($_POST['Submit'])) {
         $fields_error = "Username is required";
         header("location:mainpage.php");
     } else {
-        $username = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
+        $username = $mysqli ->real_escape_string(htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8'));
     }
 
     if (empty($_POST['password']) || trim($_POST['password']) == '') {
@@ -25,11 +27,11 @@ if (isset($_POST['Submit'])) {
         header("location:mainpage.php");
 
     } else {
-        $password = sha1(md5($_POST['password']));
+        $password = $mysqli->real_escape_string(sha1(md5($_POST['password'])));
     }
 
     if (empty($fields_error) && empty($fields_error1)) {
-        $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
+
 
 
         $result = $mysqli->query("SELECT * FROM users WHERE username='$username' AND pass='$password'");

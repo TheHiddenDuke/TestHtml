@@ -6,8 +6,14 @@
  * Time: 12:34
  */
 ?>
-<link rel="stylesheet" href="../css/style.css">
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<link rel="stylesheet" href="../css/style.css">
+<title>Register</title>
+</head>
+<body>
 <div class="banner">
 
 </div>
@@ -52,3 +58,5 @@
         </form>
 </div>
 </div>
+</body>
+</html>

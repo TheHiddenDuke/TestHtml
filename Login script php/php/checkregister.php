@@ -20,9 +20,9 @@ else if ($_POST['username'] != "" && $_POST['password'] != "" && $_POST['email']
 
     $mysqli_reg = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
 
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $pass = sha1(md5($_POST['password']));
+    $username = $mysqli->real_escape_string($_POST['username']);
+    $email = $mysqli->real_escape_string($_POST['email']);
+    $pass = $mysqli->real_escape_string(sha1(md5($_POST['password'])));
 
     $conn = "INSERT INTO users (`id`, `username`, `email`, `pass`,`isloggedin`) VALUES (NULL, '$username', '$email', '$pass','0')";
 
