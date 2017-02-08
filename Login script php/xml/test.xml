@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<itemlist>
+    <item>
+
+        <itemname>Apple</itemname>
+
+        <itemvalue>6 Kr</itemvalue>
+
+        <itemdescription>A banana from the famous terrorist osama bin laden</itemdescription>
+
+    </item>
+    <item>
+
+        <itemname>Banana</itemname>
+
+        <itemvalue>9 Kr</itemvalue>
+
+        <itemdescription>A banana from the famous terrorist osama bin laden</itemdescription>
+
+    </item><item>
+
+    <itemname>Toothpaste</itemname>
+
+    <itemvalue>25 Kr</itemvalue>
+
+    <itemdescription>A banana from the famous terrorist osama bin laden</itemdescription>
+
+</item>
+</itemlist>

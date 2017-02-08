@@ -1,4 +1,5 @@
-<table class="footer">
+
+<table class="footershop">
     <tr>
         <td width="300px">
             <a href="mainpage.php">Home</a>

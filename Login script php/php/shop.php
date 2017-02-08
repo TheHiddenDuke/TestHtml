@@ -1,18 +1,11 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Jarand
- * Date: 30/01/2017
- * Time: 13:32
- */
-?>
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" type="text/css" href="../css/style.css">
-<header>
-    <title>Hello and welcome</title>
-</header>
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="noreferrer" href="../xml/test.xml">
+</head>
 <body>
+
 <div class="banner"></div>
 <div class="nav">
     <table>
@@ -32,17 +25,40 @@
         </tr>
     </table>
 </div>
+
+
 <div class="mainbox">
 <div class="text">
+    <?php
+    session_start();
+    if($_SESSION['isloggedin']==true) {
+        echo "Welcome, " . $_SESSION['username'] . ", to administrative site!";
+    }
+    else{header("location:mainpage.php");}
+    ?>
+
+
+</div>
 <?php
-echo "Welcome, " . $_SESSION['username'] . ", to the membership site!";
+$xmlDoc = new DOMDocument();
+$xmlDoc->load("../xml/test.xml");
+
+$itemname = $xmlDoc ->getElementsByTagName("itemname");
+$itemvalue = $xmlDoc ->getElementsByTagName("itemvalue");
+$itemdescription = $xmlDoc ->getElementsByTagName("itemdescription");
+for($i=0; $i<$itemname->length;$i++) {
+    echo "<div class='shoppinglist'><img src='../images/content".$i.".png'/></div>";
+    echo "<h1>" . $itemname[$i]->nodeValue . "</h1><br>";
+    echo $itemdescription[$i]->nodeValue . "<br>";
+    echo "<h2>" . $itemvalue[$i]->nodeValue . "</h2><br>";
+}
 ?>
 </div>
-</div>
-<!-- Login box-->
 
-    <div class="rightWrapper">
-        <div class="loginbox">
+
+
+<div class="rightWrapper">
+    <div class="loginbox">
         <tr>
             <td>
                 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#f2f2f2">
@@ -59,13 +75,13 @@ echo "Welcome, " . $_SESSION['username'] . ", to the membership site!";
                 </table>
             </td>
         </tr>
-        </div>
     </div>
-    </body>
-    </html>
-
-
+</div>
+</body>
+</html>
 <?php
+
+
 //Query after item name and values
 
 $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
@@ -73,6 +89,7 @@ $result = $mysqli->query("SELECT itemname FROM items");
 //Checkbox list
 
 include 'checkboxlist.php';
-
+include'footershop.php';
 $mysqli->close();
+
 ?>
