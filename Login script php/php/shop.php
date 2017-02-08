@@ -41,7 +41,7 @@
 </div>
 <?php
 $xmlDoc = new DOMDocument();
-$xmlDoc->load("../xml/test.xml");
+$xmlDoc->load("../xml/itemlist.xml");
 
 $itemname = $xmlDoc ->getElementsByTagName("itemname");
 $itemvalue = $xmlDoc ->getElementsByTagName("itemvalue");
