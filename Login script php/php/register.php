@@ -28,22 +28,22 @@
                     <tr>
                         <td width="100">Username</td>
                         <td width="6">:</td>
-                        <td width="294"><input name="username" type="text" id="username"></td>
+                        <td width="294"><input name="username" placeholder="Username" type="text" id="username"></td>
                     </tr>
                     <tr>
                         <td>Password</td>
                         <td>:</td>
-                        <td><input name="password" type="password" id="password"></td>
+                        <td><input name="password" placeholder="Password" type="password" id="password"></td>
                     </tr>
                     <tr>
                         <td width="700">Repeat</td>
                         <td>:</td>
-                        <td><input name="passrep" type="password" id="passrep"></td>
+                        <td><input name="passrep" placeholder="Repeat password" type="password" id="passrep"></td>
                     </tr>
                     <tr>
                         <td>Email</td>
                         <td>:</td>
-                        <td><input name="email" type="email" id="email"</td>
+                        <td><input name="email" placeholder="Email adress" type="email" id="email"</td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>

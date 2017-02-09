@@ -1,19 +1,6 @@
-<table class="footer">
-    <tr>
-        <td width="300px">
-            <a href="mainpage.php">Home</a>
-        </td>
-
-        <td width="300px">
-            <a href="contactus.php">Contact us</a>
-        </td>
-
-        <td width="300px">
-            <a href="aboutus.php">About us</a>
-        </td>
-
-        <td width="300px">
-            <a href="shop.php">Shop</a>
-        </td>
-    </tr>
-</table>
+<ul class="footer">
+    <li class="active"><a href="mainpage.php">Home</a></li>
+    <li><a href="shop.php">Shop</a></li>
+    <li><a href="contactus.php">Contact</a></li>
+    <li><a href="aboutus.php">About</a></li>
+</ul>

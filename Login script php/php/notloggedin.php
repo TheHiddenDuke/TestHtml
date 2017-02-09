@@ -15,24 +15,14 @@
 </header>
 <body>
 <div class="banner"></div>
-<div class="nav">
-    <table>
-        <tr>
-            <td width="120px">
-                <a href="mainpage.php">Home</a>
-            </td>
-            <td width="120px">
-                <a href="shop.php">Shop</a>
-            </td>
-            <td width="170px">
-                <a href="aboutus.php">About us</a>
-            </td>
-            <td width="150px">
-                <a href="contactus.php">Contact us</a>
-            </td>
-        </tr>
-    </table>
-</div>
+
+<ul>
+    <li class="active"><a href="mainpage.php">Home</a></li>
+    <li><a href="contactus.php">Contact</a></li>
+    <li><a href="aboutus.php">About</a></li>
+</ul>
+
+
 <div class="mainbox">
 <div class="text">
 <h1>Welcome to this wonderful site, please log in!</h1>
@@ -50,12 +40,12 @@
                     <tr>
                         <td width="78">Username</td>
                         <td width="6">:</td>
-                        <td width="294"><input name="username" type="text" id="username"></td>
+                        <td width="294"><input name="username" placeholder="Username" type="text" id="username"></td>
                     </tr>
                     <tr>
                         <td>Password</td>
                         <td>:</td>
-                        <td><input name="password" type="password" id="password"></td>
+                        <td><input name="password" placeholder="Password" type="password" id="password"></td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>

@@ -15,24 +15,15 @@
 </header>
     <body>
     <div class="banner"></div>
-    <div class="nav">
-        <table>
-            <tr>
-                <td width="120px">
-                    <a href="mainpage.php">Home</a>
-                </td>
-                <td width="120px">
-                    <a href="shop.php">Shop</a>
-                </td>
-                <td width="170px">
-                    <a href="aboutus.php">About us</a>
-                </td>
-                <td width="150px">
-                    <a href="contactus.php">Contact us</a>
-                </td>
-            </tr>
-        </table>
-    </div>
+
+
+    <ul>
+        <li class="active"><a href="mainpage.php">Home</a></li>
+        <li><a href="shop.php">Shop</a></li>
+        <li><a href="contactus.php">Contact</a></li>
+        <li><a href="aboutus.php">About</a></li>
+    </ul>
+
 <div class="mainbox">
     <div class="text">
     <?php

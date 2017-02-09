@@ -30,8 +30,4 @@ if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
     include 'footernot.php';
 
 }
-
-
-
-
 ?>
