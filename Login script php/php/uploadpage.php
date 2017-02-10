@@ -20,6 +20,12 @@
 
     <div class="text">
         <?php
+        session_start();
+        if($_SESSION['isloggedin']==true) {
+
+        }
+        else{header("location:mainpage.php");}
+
         echo "Please input the needed information!";
         ?>
     </div>
@@ -38,7 +44,7 @@
                 </tr>
                 <tr>
                     <td align="right" width="50%">Price:</td>
-                    <td><input name="price" placeholder="Price" type="text" id="price"></td>
+                    <td><input name="price" placeholder="Price" type="number" id="price"></td>
                 </tr>
                 <tr>
                     <td align="right" width="50%">Description:</td>

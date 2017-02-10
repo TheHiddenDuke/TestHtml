@@ -56,7 +56,7 @@ if ($uploadOk == 0) {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 
         $name = $_POST['name'];
-        $cost = $_POST['price'] . " Kr";
+        $cost = $_POST['price'];
         $description = htmlspecialchars($_POST['desc']);
         $filename = basename($_FILES["fileToUpload"]["name"]);
 
@@ -70,12 +70,18 @@ if ($uploadOk == 0) {
         $sxe = new SimpleXMLElement($xml->asXML());
         $newItem = $sxe->addChild("item");
         $newItem->addChild("itemname", $name);
-        $newItem->addChild("itemvalue",$cost);
+        $newItem->addChild("itemvalue",$cost . " Kr");
         $newItem->addChild("itemdescription",$description);
         $newItem->addChild("itemicon", $filename);
         $sxe->asXML("../xml/itemlist.xml");
 
 
+        $mysqli_reg = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
+
+
+        $conn = "INSERT INTO items (`itemname`, `itemvalue`) VALUES ('$name', '$cost')";
+
+        $result = $mysqli_reg ->query($conn);
 
 
 
