@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
 <itemlist>
     <item>
 
@@ -23,15 +21,17 @@
 
         <itemicon>content1.png</itemicon>
 
-    </item><item>
+    </item>
+    <item>
 
-    <itemname>Toothpaste</itemname>
+        <itemname>Toothpaste</itemname>
 
-    <itemvalue>25 Kr</itemvalue>
+        <itemvalue>25 Kr</itemvalue>
 
-    <itemdescription>Toothpaste used by Barack Obama before leaving the white house</itemdescription>
+        <itemdescription>Toothpaste used by Barack Obama before leaving the white house</itemdescription>
 
-    <itemicon>content2.png</itemicon>
+        <itemicon>content2.png</itemicon>
 
-</item>
+    </item>
+    
 </itemlist>

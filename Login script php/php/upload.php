@@ -1,5 +1,9 @@
 <?php
 
+if(isset($_POST['back'])){
+    header("location:mainpage.php");
+}
+
 
 $target_dir = "../images/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -50,6 +54,34 @@ if ($uploadOk == 0) {
     // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+
+        $name = $_POST['name'];
+        $cost = $_POST['price'] . " Kr";
+        $description = htmlspecialchars($_POST['desc']);
+        $filename = basename($_FILES["fileToUpload"]["name"]);
+
+        $xmlDoc = new DOMDocument();
+        $xmlDoc->load("../xml/itemlist.xml");
+
+        $element = $xmlDoc->createTextNode("item");
+
+
+        $xml = simplexml_load_file("../xml/itemlist.xml");
+        $sxe = new SimpleXMLElement($xml->asXML());
+        $newItem = $sxe->addChild("item");
+        $newItem->addChild("itemname", $name);
+        $newItem->addChild("itemvalue",$cost);
+        $newItem->addChild("itemdescription",$description);
+        $newItem->addChild("itemicon", $filename);
+        $sxe->asXML("../xml/itemlist.xml");
+
+
+
+
+
+
+
+
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
         ?>
         <form action="mainpage.php" method="post">

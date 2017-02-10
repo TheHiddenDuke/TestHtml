@@ -20,6 +20,7 @@
     <ul>
         <li class="active"><a href="mainpage.php">Home</a></li>
         <li><a href="shop.php">Shop</a></li>
+        <li><a href="uploadpage.php">Upload</a></li>
         <li><a href="contactus.php">Contact</a></li>
         <li><a href="aboutus.php">About</a></li>
     </ul>
@@ -31,12 +32,6 @@
     ?>
     </div>
 
-
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        Select image to upload:
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload Image" name="submit">
-    </form>
 
 </div>
 <div class="rightWrapper">
