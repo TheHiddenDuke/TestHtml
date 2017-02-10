@@ -22,7 +22,7 @@
     <?php
     session_start();
     if($_SESSION['isloggedin']==true) {
-        echo "Welcome, " . $_SESSION['username'] . ", to administrative site!";
+        echo "Welcome, " . $_SESSION['username'] . ", to the shop!";
     }
     else{header("location:mainpage.php");}
     ?>
@@ -34,19 +34,23 @@ $xmlDoc = new DOMDocument();
 $xmlDoc->load("../xml/itemlist.xml");
 
 $itemname = $xmlDoc ->getElementsByTagName("itemname");
-
-
 $itemvalue = $xmlDoc ->getElementsByTagName("itemvalue");
 $itemdescription = $xmlDoc ->getElementsByTagName("itemdescription");
+$itemicon = $xmlDoc->getElementsByTagName("itemicon");
 
 
 
 
 for($i=0; $i<$itemname->length;$i++) {
-    echo "<div class='shoppinglist'><img src='../images/content".$i.".png'/></div>";
-    echo "<h1>" . $itemname[$i]->nodeValue . "</h1><br>";
-    echo $itemdescription[$i]->nodeValue . "<br>";
-    echo "<h2>" . $itemvalue[$i]->nodeValue . "</h2><br>";
+    ?><div class="itembox">
+    <table><?php
+    echo "<tr><td width='140px'><div class='shoppinglist'><img style='vertical-align: top' src='../images/" . $itemicon[$i]->nodeValue . "'/></div></td>";
+    echo "<td><h1>" . $itemname[$i]->nodeValue . "</h1><br>";
+    echo $itemdescription[$i]->nodeValue;
+    echo "<h2>" . $itemvalue[$i]->nodeValue . "</h2><br></td>";
+    ?>
+        </tr></table></div>
+    <?php
 }
 ?>
 </div>

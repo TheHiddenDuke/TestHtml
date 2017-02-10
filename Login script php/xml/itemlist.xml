@@ -10,6 +10,8 @@
 
         <itemdescription>An apple from the garden of Eden, guarded by the Cherubim</itemdescription>
 
+        <itemicon>content0.png</itemicon>
+
     </item>
     <item>
 
@@ -19,6 +21,8 @@
 
         <itemdescription>A banana from the famous terrorist osama bin laden</itemdescription>
 
+        <itemicon>content1.png</itemicon>
+
     </item><item>
 
     <itemname>Toothpaste</itemname>
@@ -27,45 +31,7 @@
 
     <itemdescription>Toothpaste used by Barack Obama before leaving the white house</itemdescription>
 
-</item><item>
-
-    <itemname>Toothpaste</itemname>
-
-    <itemvalue>25 Kr</itemvalue>
-
-    <itemdescription>Toothpaste used by Barack Obama before leaving the white house</itemdescription>
-
-</item><item>
-
-    <itemname>Toothpaste</itemname>
-
-    <itemvalue>25 Kr</itemvalue>
-
-    <itemdescription>Toothpaste used by Barack Obama before leaving the white house</itemdescription>
-
-</item><item>
-
-    <itemname>Toothpaste</itemname>
-
-    <itemvalue>25 Kr</itemvalue>
-
-    <itemdescription>Toothpaste used by Barack Obama before leaving the white house</itemdescription>
-
-</item><item>
-
-    <itemname>Toothpaste</itemname>
-
-    <itemvalue>25 Kr</itemvalue>
-
-    <itemdescription>Toothpaste used by Barack Obama before leaving the white house</itemdescription>
-
-</item><item>
-
-    <itemname>Toothpaste</itemname>
-
-    <itemvalue>25 Kr</itemvalue>
-
-    <itemdescription>Toothpaste used by Barack Obama before leaving the white house</itemdescription>
+    <itemicon>content2.png</itemicon>
 
 </item>
 </itemlist>
