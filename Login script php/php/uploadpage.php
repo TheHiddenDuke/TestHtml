@@ -21,7 +21,7 @@
     <div class="text">
         <?php
         session_start();
-        if($_SESSION['isloggedin']==true) {
+        if($_SESSION['isadmin']==true) {
 
         }
         else{header("location:mainpage.php");}
