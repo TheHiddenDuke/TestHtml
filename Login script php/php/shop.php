@@ -9,19 +9,36 @@
 <div class="banner"></div>
 
 <!--Navbar top-->
-<ul>
+<?php
+session_start();
+if($_SESSION['isadmin'] == true){
+    ?>
+    <ul>
     <li><a href="mainpage.php">Home</a></li>
     <li class="active"><a href="shop.php">Shop</a></li>
     <li><a href="uploadpage.php">Upload</a></li>
     <li><a href="contactus.php">Contact</a></li>
     <li><a href="aboutus.php">About</a></li>
 </ul>
+<?php
+}
+else{
+    ?>
+    <ul>
+        <li><a href="mainpage.php">Home</a></li>
+        <li class="active"><a href="shop.php">Shop</a></li>
+        <li><a href="contactus.php">Contact</a></li>
+        <li><a href="aboutus.php">About</a></li>
+    </ul>
+<?php
+}
+?>
+
 
 
 <div class="mainbox">
 <div class="text">
     <?php
-    session_start();
     if($_SESSION['isloggedin']==true) {
         echo "Welcome, " . $_SESSION['username'] . ", to the shop!";
     }
