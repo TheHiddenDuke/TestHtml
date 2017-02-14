@@ -15,7 +15,21 @@ for($i=0; $i<$itemname->length;$i++) {
         $currentNode =$root->getElementsByTagName('item')->item($i);
         $deletedNode =$root->removeChild($currentNode);
 
+        $name = $_POST['item'];
         echo $xmlDoc->save("../xml/itemlist.xml");
+
+
+
+        $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
+
+        $conn = "DELETE FROM items WHERE itemname='$name'";
+        $mysqli->query($conn);
+        $mysqli->close();
+
+
+
+
+
     }
 }
 

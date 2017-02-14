@@ -64,15 +64,3 @@
 
 </body>
 </html>
-
-
-<?php
-//Query after item name and values
-
-$mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
-$result = $mysqli->query("SELECT itemname FROM items");
-//Checkbox list
-
-include 'checkboxlist.php';
-$mysqli->close();
-?>
