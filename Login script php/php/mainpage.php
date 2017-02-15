@@ -27,7 +27,7 @@ if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
 
 
     include 'notloggedin.php';
-    include 'footernot.php';
+    include 'footer.php';
 
 }
 ?>

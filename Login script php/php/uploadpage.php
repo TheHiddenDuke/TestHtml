@@ -32,7 +32,7 @@
     </div>
 
 <div class="itembox">
-    <form action="upload.php" method="post" enctype="multipart/form-data">
+    <form action="checkupload.php" method="post" enctype="multipart/form-data">
 
         <td>
             <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#f2f2f2">
