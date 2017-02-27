@@ -1,6 +1,6 @@
 
 <?php
-if($_SESSION['isadmin']==true && $_SESSION['isloggedin'] == true){
+if(isset($_SESSION['isadmin'])==true && isset($_SESSION['isloggedin']) == true  ){
     ?>
     <ul class="footer">
         <li class="active"><a href="mainpage.php">Home</a></li>
@@ -14,7 +14,7 @@ if($_SESSION['isadmin']==true && $_SESSION['isloggedin'] == true){
 
     <?php
 }
-else if ($_SESSION['isadmin']==false && $_SESSION['isloggedin'] == true) {
+else if (isset($_SESSION['isadmin'])==false && isset($_SESSION['isloggedin']) == true) {
     ?>
 
     <ul class="footer">

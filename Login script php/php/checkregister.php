@@ -18,7 +18,7 @@ else if ($_POST['password'] != $_POST['passrep']){
 
 else if ($_POST['username'] != "" && $_POST['password'] != "" && $_POST['email'] != "" && $_POST['passrep'] != "" && isset($_POST['register'])){
 
-    $mysqli_reg = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
+    $mysqli_reg = new mysqli ("localhost", "root", "heihei", "innlogging") or die("cannot connect");
 
     $username = $mysqli_reg->real_escape_string($_POST['username']);
     $email = $mysqli_reg->real_escape_string($_POST['email']);
