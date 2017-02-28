@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <itemlist>
-    <item>
-
-        <itemname>Apple</itemname>
-
-        <itemvalue>6 Kr</itemvalue>
-
-        <itemdescription>An apple from the garden of Eden, guarded by the Cherubim</itemdescription>
-
-        <itemicon>content0.png</itemicon>
-
-    </item>
+    
     <item>
 
         <itemname>Banana</itemname>
@@ -33,4 +23,4 @@
         <itemicon>content2.png</itemicon>
 
     </item>
-</itemlist>
+<item><itemname>Apple</itemname><itemvalue>9 Kr</itemvalue><itemdescription>Apple from the Garden of Eden</itemdescription><itemicon>content0.png</itemicon></item></itemlist>
