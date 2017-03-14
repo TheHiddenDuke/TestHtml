@@ -57,7 +57,7 @@ $itemicon = $element ->getElementsByTagName("itemicon");
                     </tr>
                     <tr>
                         <td align="right">Current name:</td>
-                        <?php echo"<td><input name='currname' value='" . $itemname[0]->nodeValue . "' type='' id='currname' disabled></td>";?>
+                        <?php echo"<td><input name='currname' value='" . $itemname[0]->nodeValue . "' type='text' id='currname'></td>";?>
                     </tr>
                     <tr>
                         <td align="right">Name:</td>
