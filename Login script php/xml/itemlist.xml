@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <itemlist>
     
-    <item>
+    <item xml:id="Banana">
 
         <itemname>Banana</itemname>
 
@@ -12,7 +12,7 @@
         <itemicon>content1.png</itemicon>
 
     </item>
-    <item>
+    <item xml:id="Toothpaste">
 
         <itemname>Toothpaste</itemname>
 
@@ -23,4 +23,4 @@
         <itemicon>content2.png</itemicon>
 
     </item>
-<item><itemname>Apple</itemname><itemvalue>6 Kr</itemvalue><itemdescription>Apple from the Garden of Eden</itemdescription><itemicon>content0.png</itemicon></item></itemlist>
+<item xml:id="Apple"><itemname>Apple</itemname><itemvalue>6 Kr</itemvalue><itemdescription>Apple from the Garden of Eden</itemdescription><itemicon>content0.png</itemicon></item></itemlist>

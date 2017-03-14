@@ -68,7 +68,7 @@ if ($uploadOk == 0) {
 
         $xml = simplexml_load_file("../xml/itemlist.xml");
         $sxe = new SimpleXMLElement($xml->asXML());
-        $newItem = $sxe->addChild("item");
+        $newItem = $sxe->addChild("item", $name);
         $newItem->addChild("itemname", $name);
         $newItem->addChild("itemvalue",$cost . " Kr");
         $newItem->addChild("itemdescription",$description);

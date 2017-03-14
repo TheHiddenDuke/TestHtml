@@ -1,21 +1,24 @@
-<?php
-$xmlDoc = new DOMDocument();
-$xmlDoc->load("../xml/itemlist.xml");
-
-$itemname = $xmlDoc ->getElementById("itemname");
-$itemvalue = $xmlDoc ->getElementsByTagName("itemvalue");
-$itemdescription = $xmlDoc ->getElementsByTagName("itemdescription");
-$itemicon = $xmlDoc->getElementsByTagName("itemicon");
-
-$name = $_POST['item'];
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
+<?php
+$xmlDoc = new DOMDocument();
+$xmlDoc->load("../xml/itemlist.xml");
+$name = $_POST['item'];
+
+$element = $xmlDoc ->getElementById($name);
+$itemname = $element ->getElementsByTagName("itemname");
+$itemvalue = $element ->getElementsByTagName("itemvalue");
+$itemdescription = $element ->getElementsByTagName("itemdescription");
+$itemicon = $element ->getElementsByTagName("itemicon");
+
+?>
+
+
+
 <body>
 
 <div class="banner"></div>
@@ -45,7 +48,7 @@ $name = $_POST['item'];
     </div>
 
     <div class="itembox">
-        <form action="checkupload.php" method="post" enctype="multipart/form-data">
+        <form action="changemodify.php" method="post" enctype="multipart/form-data">
 
             <td>
                 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#f2f2f2">
@@ -53,20 +56,26 @@ $name = $_POST['item'];
                         <td colspan="3" align="center"><strong>Item information!</strong></td>
                     </tr>
                     <tr>
+                        <td align="right">Current name:</td>
+                        <?php echo"<td><input name='currname' value='" . $itemname[0]->nodeValue . "' type='' id='currname' disabled></td>";?>
+                    </tr>
+                    <tr>
                         <td align="right">Name:</td>
-                        <td><input name="name" placeholder="Name" type="text" id="name"></td>
+                        <?php echo"<td><input name='name' placeholder='" . $itemname[0]->nodeValue . "' type='text' id='name'></td>";?>
                     </tr>
                     <tr>
                         <td align="right" width="50%">Price:</td>
-                        <td><input name="price" placeholder="Price" type="number" id="price"></td>
+                        <?php echo"<td><input name='price' placeholder='" . $itemvalue[0]->nodeValue . "' type='number' id='price'></td>";?>
                     </tr>
                     <tr>
+
                         <td align="right" width="50%">Description:</td>
-                        <td align="left"><textarea cols="50" rows="5" style="vertical-align: top" name="desc" placeholder="Description" id="desc"></textarea></td>
+                        <?php echo"<td align='left'><textarea cols='50' rows='5' style='vertical-align: top' name='desc' placeholder='" . $itemdescription[0]->nodeValue . "' id='desc'></textarea></td>";?>
                     </tr>
                     <tr>
                         <td align="right">Current image:</td>
-                        <?php echo "<td width='140px'><div class='shoppinglist'><img style='vertical-align: top' src='../images/" . $itemicon[0]->nodeValue . "'/></div></td>";?>
+
+                        <?php echo "<td width='140px'><div class='shoppinglist'><img style='vertical-align: top' src='../images/" . $itemicon[0] -> nodeValue . "'/></div></td>";?>
                     </tr>
                     <tr>
                         <td align="right">Select image to upload:</td>
