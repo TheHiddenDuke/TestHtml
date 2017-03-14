@@ -25,6 +25,7 @@ $itemicon = $xmlDoc->getElementsByTagName("itemicon");
         <li><a href="shop.php">Shop</a></li>
         <li><a href="uploadpage.php">Upload</a></li>
         <li class="active"><a href="deleteitem.php">Remove item</a></li>
+        <li><a href="modifyitem.php">Modify item</a></li>
         <li><a href="contactus.php">Contact</a></li>
         <li><a href="aboutus.php">About</a></li>
     </ul>
@@ -42,7 +43,7 @@ for($i=0; $i<$itemname->length;$i++) {
     ?>
         </select>
     <br>
-    <input type="submit">
+    <input type="submit" value="Submit">
     </form>
     </div>
 </div>

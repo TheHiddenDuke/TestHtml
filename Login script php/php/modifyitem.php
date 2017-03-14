@@ -1,40 +1,51 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Jarand
- * Date: 30/01/2017
- * Time: 13:31
- */
+session_start();
+
+if($_SESSION['isadmin']==true) {
+
+}
+else{header("location:mainpage.php");}
+
+$xmlDoc = new DOMDocument();
+$xmlDoc->load("../xml/itemlist.xml");
+
+$itemname = $xmlDoc ->getElementsByTagName("itemname");
+$itemvalue = $xmlDoc ->getElementsByTagName("itemvalue");
+$itemdescription = $xmlDoc ->getElementsByTagName("itemdescription");
+$itemicon = $xmlDoc->getElementsByTagName("itemicon");
+
 ?>
-<!-- Login box-->
-<!DOCTYPE html>
-<html lang="en">
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+<html>
 <header>
-    <title>Hello and welcome</title>
-</header>
-    <body>
+    <link rel="stylesheet" href="../css/style.css">
     <div class="banner"></div>
 
-
     <ul>
-        <li class="active"><a href="mainpage.php">Home</a></li>
+        <li><a href="mainpage.php">Home</a></li>
         <li><a href="shop.php">Shop</a></li>
         <li><a href="uploadpage.php">Upload</a></li>
         <li><a href="deleteitem.php">Remove item</a></li>
-        <li><a href="modifyitem.php">Modify item</a></li>
+        <li class="active"><a href="modifyitem.php">Modify item</a></li>
         <li><a href="contactus.php">Contact</a></li>
         <li><a href="aboutus.php">About</a></li>
     </ul>
 
+</header>
+<body>
 <div class="mainbox">
     <div class="text">
-    <?php
-    echo "Welcome, " . $_SESSION['username'] . ", to administrative site!";
-    ?>
+        <form name="form1" method="post" action="checkmodify.php">
+            <select name="item">
+                <?php
+                for($i=0; $i<$itemname->length;$i++) {
+                    echo "<option value='" . $itemname[$i]->nodeValue . "'>" . $itemname[$i]->nodeValue . "</option>";
+                }
+                ?>
+            </select>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
     </div>
-
-
 </div>
 <div class="rightWrapper">
     <div class="loginbox">
@@ -56,18 +67,8 @@
         </tr>
     </div>
 </div>
-    </body>
-    </html>
 
+<?php include'footermodify.php'; ?>
 
-<?php
-//Query after item name and values
-
-$mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
-$result = $mysqli->query("SELECT itemname FROM items");
-//Checkbox list
-
-include 'checkboxlist.php';
-
-$mysqli->close();
-?>
+</body>
+</html>
