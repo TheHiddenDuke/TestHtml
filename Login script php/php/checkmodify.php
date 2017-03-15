@@ -64,7 +64,7 @@ $costint = filter_var($itemvalue[0]->nodeValue, FILTER_SANITIZE_NUMBER_INT);
                     </tr>
                     <tr>
                         <td align="right">Current name:</td>
-                        <?php echo "<td><input name='currname' value='" . $itemname[0]->nodeValue . "' type='text' id='currname'></td>"; ?>
+                        <?php echo "<td><input name='currname' value='" . $itemname[0]->nodeValue . "' type='text' id='currname' readonly></td>"; ?>
                     </tr>
                     <tr>
                         <td align="right">Name:</td>
@@ -78,6 +78,10 @@ $costint = filter_var($itemvalue[0]->nodeValue, FILTER_SANITIZE_NUMBER_INT);
 
                         <td align="right" width="50%">Description:</td>
                         <?php echo "<td align='left'><textarea cols='50' rows='5' style='vertical-align: top' name='desc' id='desc'>$desc</textarea></td>"; ?>
+                    </tr>
+                    <tr>
+                        <td align="right">Current name:</td>
+                        <?php echo "<td><input name='imgname' value='" . $itemicon[0]->nodeValue . "' type='text' id='imgname' readonly></td>"; ?>
                     </tr>
                     <tr>
                         <td align="right">Current image:</td>

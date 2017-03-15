@@ -3,6 +3,7 @@ $xmlDoc = new DOMDocument();
 $xmlDoc->load("../xml/itemlist.xml");
 
 $oldName = $_POST['currname'];
+$oldImgName = $_POST['imgname'];
 $name = $_POST['name'];
 $value = $_POST['price'];
 $desc = htmlspecialchars($_POST['desc']);
@@ -39,6 +40,9 @@ for ($i = 0; $i < $itemname->length; $i++) {
         $newItem->addChild("itemdescription", $desc);
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             $newItem->addChild("itemicon", $filename);
+        }
+        else{
+            $newItem->addChild("itemicon", $oldImgName);
         }
 
 

@@ -34,6 +34,15 @@ $itemicon = $xmlDoc->getElementsByTagName("itemicon");
 </header>
 <body>
 <div class="mainbox">
+
+    <div class="text">
+        <?php
+
+        echo "Please select product!";
+
+        ?>
+    </div>
+
     <div class="text">
         <form name="form1" method="post" action="checkitem.php">
             <select name="item">
