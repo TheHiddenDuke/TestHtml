@@ -19,7 +19,8 @@
                         $truename = $name['itemname'];
                         ?>
 
-                        <input type="checkbox" name="<?php echo htmlspecialchars($truename, ENT_QUOTES, 'UTF-8')?>" value="true"/>
+                        <input type="checkbox" name="<?php echo htmlspecialchars($truename, ENT_QUOTES, 'UTF-8') ?>"
+                               value="true"/>
                         <?php echo $truename; ?><br>
                     <?php endwhile; ?>
                     <input type="submit" name="submit" value="checkout">

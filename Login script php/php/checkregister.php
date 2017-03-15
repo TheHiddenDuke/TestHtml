@@ -7,16 +7,12 @@
  */
 session_start();
 //exit out of registration
-if (isset($_POST['abort'])){
+if (isset($_POST['abort'])) {
     header("location:mainpage.php");
-}
-//If password don't match
-else if ($_POST['password'] != $_POST['passrep']){
+} //If password don't match
+else if ($_POST['password'] != $_POST['passrep']) {
     header("location:register.php");
-}
-
-
-else if ($_POST['username'] != "" && $_POST['password'] != "" && $_POST['email'] != "" && $_POST['passrep'] != "" && isset($_POST['register'])){
+} else if ($_POST['username'] != "" && $_POST['password'] != "" && $_POST['email'] != "" && $_POST['passrep'] != "" && isset($_POST['register'])) {
 
     $mysqli_reg = new mysqli ("localhost", "root", "heihei", "innlogging") or die("cannot connect");
 
@@ -26,17 +22,16 @@ else if ($_POST['username'] != "" && $_POST['password'] != "" && $_POST['email']
 
     $conn = "INSERT INTO users (`username`, `email`, `pass`) VALUES ('$username', '$email', '$pass')";
 
-    $result = $mysqli_reg ->query($conn);
-    if(isset($result)){
-        $mysqli_reg ->close();
+    $result = $mysqli_reg->query($conn);
+    if (isset($result)) {
+        $mysqli_reg->close();
         header("location:mainpage.php");
-    }
-    else{
+    } else {
         header("location:register.php");
     }
 
 }
 
-if(($_POST['username'] == "" || $_POST['password'] == "" || $_POST['email'] == "" || $_POST['passrep'] == "") && isset($_POST['register'])){
+if (($_POST['username'] == "" || $_POST['password'] == "" || $_POST['email'] == "" || $_POST['passrep'] == "") && isset($_POST['register'])) {
     header("location:register.php");
 }

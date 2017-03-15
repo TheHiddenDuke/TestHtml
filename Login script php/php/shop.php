@@ -64,7 +64,7 @@ $itemicon = $xmlDoc->getElementsByTagName("itemicon");
 for($i=0; $i<$itemname->length;$i++) {
     ?><div class="itembox">
     <table><?php
-    echo "<tr><td width='140px'><div class='shoppinglist'><img style='vertical-align: top' src='../images/" . $itemicon[$i]->nodeValue . "'/></div></td>";
+        echo "<tr><td width='140px'><div class='shoppinglist'><img style='vertical-align: top' src='../images/" . $itemicon[$i]->nodeValue . "'/></div></td>";
     echo "<td><h1>" . $itemname[$i]->nodeValue . "</h1><br>";
     echo $itemdescription[$i]->nodeValue;
     echo "<h2>" . $itemvalue[$i]->nodeValue . "</h2><br></td>";

@@ -23,7 +23,7 @@ if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
     include 'footer.php';
 
     //If user is not logged in
-} else{
+} else {
 
 
     include 'notloggedin.php';

@@ -10,7 +10,7 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 <title>Register</title>
 </head>
 <body>

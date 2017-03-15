@@ -9,7 +9,7 @@
 $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
 $result = $mysqli->query("SELECT itemname FROM items");
 $sum = 0;
-while ($name = mysqli_fetch_assoc($result)){
+while ($name = mysqli_fetch_assoc($result)) {
     if (isset($_POST[$name['itemname']]) && $_POST[$name['itemname']] == 'true') {
         $truename = $name['itemname'];
         $itemcost = $mysqli->query("SELECT itemvalue FROM items WHERE itemname='$truename'");
@@ -18,7 +18,7 @@ while ($name = mysqli_fetch_assoc($result)){
     }
 
 }
-echo "Your total price is: ", $sum ;
+echo "Your total price is: ", $sum;
 ?>
 
 <form name="form1" method="post" action="mainpage.php">

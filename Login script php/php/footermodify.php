@@ -1,5 +1,5 @@
 <?php
-if(isset($_SESSION['isadmin']) == true){
+if (isset($_SESSION['isadmin']) == true) {
 
     ?>
     <ul class="footer">

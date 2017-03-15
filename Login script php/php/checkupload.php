@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['back'])){
+if (isset($_POST['back'])) {
     header("location:mainpage.php");
 }
 
@@ -8,11 +8,11 @@ if(isset($_POST['back'])){
 $target_dir = "../images/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+$imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
+if (isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
+    if ($check !== false) {
         echo "File is an image - " . $check["mime"] . ".";
         $uploadOk = 1;
     } else {
@@ -34,8 +34,9 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
 }
 
 // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "PNG" && $imageFileType != "jpeg"
-    && $imageFileType != "gif" && $imageFileType != "png") {
+if ($imageFileType != "jpg" && $imageFileType != "PNG" && $imageFileType != "jpeg"
+    && $imageFileType != "gif" && $imageFileType != "png"
+) {
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
     $uploadOk = 0;
 }
@@ -70,8 +71,8 @@ if ($uploadOk == 0) {
         $sxe = new SimpleXMLElement($xml->asXML());
         $newItem = $sxe->addChild("item", $name);
         $newItem->addChild("itemname", $name);
-        $newItem->addChild("itemvalue",$cost . " Kr");
-        $newItem->addChild("itemdescription",$description);
+        $newItem->addChild("itemvalue", $cost . " Kr");
+        $newItem->addChild("itemdescription", $description);
         $newItem->addChild("itemicon", $filename);
         $sxe->asXML("../xml/itemlist.xml");
 
@@ -81,14 +82,10 @@ if ($uploadOk == 0) {
 
         $conn = "INSERT INTO items (`itemname`, `itemvalue`) VALUES ('$name', '$cost')";
 
-        $result = $mysqli_reg ->query($conn);
+        $result = $mysqli_reg->query($conn);
 
 
-
-
-
-
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
         ?>
         <form action="mainpage.php" method="post">
             <input type="submit" value="Ok" name="submit">
