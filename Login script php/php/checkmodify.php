@@ -80,7 +80,7 @@ $costint = filter_var($itemvalue[0]->nodeValue, FILTER_SANITIZE_NUMBER_INT);
                         <?php echo "<td align='left'><textarea cols='50' rows='5' style='vertical-align: top' name='desc' id='desc'>$desc</textarea></td>"; ?>
                     </tr>
                     <tr>
-                        <td align="right">Current name:</td>
+                        <td align="right">Current image name:</td>
                         <?php echo "<td><input name='imgname' value='" . $itemicon[0]->nodeValue . "' type='text' id='imgname' readonly></td>"; ?>
                     </tr>
                     <tr>
@@ -103,26 +103,9 @@ $costint = filter_var($itemvalue[0]->nodeValue, FILTER_SANITIZE_NUMBER_INT);
     </div>
 </div>
 
-<div class="rightWrapper">
-    <div class="loginbox">
-        <tr>
-            <td>
-                <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#f2f2f2">
-                    <tr>
-                        <td colspan="3" align="center"><font size="6"> You are logged in </font></td>
-                    </tr>
-                    <form name="form1" method="post" action="logout.php">
-                        <tr>
-                            <td width="78">Logout?</td>
-                            <td width="6">:</td>
-                            <td width="294"><input type="submit" name="Logout" value="Logout"></td>
-                        </tr>
-                    </form>
-                </table>
-            </td>
-        </tr>
-    </div>
-</div>
 <?php
+
+include 'logoutbox.php';
+
 include 'footermodify.php';
 ?>
