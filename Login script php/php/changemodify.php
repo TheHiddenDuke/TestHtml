@@ -1,4 +1,8 @@
 <?php
+if(isset($_POST['back'])){
+    header("location:modifyitem.php");
+}
+
 $xmlDoc = new DOMDocument();
 $xmlDoc->load("../xml/itemlist.xml");
 
@@ -48,14 +52,20 @@ for ($i = 0; $i < $itemname->length; $i++) {
 
         $sxe->asXML("../xml/itemlist.xml");
 
-        echo $name, $value;
-
         $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
 
         $conn = "UPDATE items SET itemname='$name', itemvalue='$value' WHERE itemname ='$oldName'";
         $mysqli->query($conn);
 
         $mysqli->close();
+        echo "The item information has been changed.";
+        ?>
+
+        <form action="modifyitem.php" method="post">
+            <input type="submit" value="Ok" name="submit">
+        </form>
+
+        <?php
 
 
     }

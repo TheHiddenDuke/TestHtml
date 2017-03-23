@@ -37,7 +37,6 @@ echo "Welcome, " . $_SESSION['username'] . ", to the membership site!";
     </body>
     </html>
 
-
 <?php
 //Query after item name and values
 

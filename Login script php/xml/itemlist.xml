@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <itemlist>
 
-    <item xml:id="Banana">
-
-        <itemname>Banana</itemname>
-
-        <itemvalue>9 Kr</itemvalue>
-
-        <itemdescription>A banana from the famous terrorist osama bin laden</itemdescription>
-
-        <itemicon>content1.png</itemicon>
-
-    </item>
+    
     <item xml:id="Toothpaste">
 
         <itemname>Toothpaste</itemname>
@@ -29,4 +19,4 @@
         <itemdescription>Apple from the Garden of Eden</itemdescription>
         <itemicon>content0.png</itemicon>
     </item>
-</itemlist>
+<item><itemname>Banana</itemname><itemvalue>3 Kr</itemvalue><itemdescription>A banana from the famous terrorist osama bin laden</itemdescription><itemicon>content1.png</itemicon></item></itemlist>
