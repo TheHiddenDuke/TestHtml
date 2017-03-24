@@ -39,6 +39,19 @@ else{
 
 
 <div class="mainbox">
+    <!-- Choose if information comes from database or xml file -->
+
+    <form name="form1" method="post" action="shop.php">
+            <select name="item">
+
+                <option value ="data">Database</option>
+                <option value ="xml">Xml file</option>
+
+    </select>
+    <br>
+    <input type="submit" value="Submit">
+    </form>
+
 <div class="text">
     <?php
     if($_SESSION['isloggedin']==true) {
@@ -49,31 +62,64 @@ else{
 
 </div>
 <?php
+if ($_POST['item'] == "data"){
+    $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
+    $conn = "SELECT * FROM items";
+    $result = $mysqli->query($conn);
 
-$xmlDoc = new DOMDocument();
-$xmlDoc->load("../xml/itemlist.xml");
+    while ($row = $result->fetch_assoc()) {
+        $truevalue = $row['itemvalue'];
+        $truename = $row['itemname'];
+        $truedesc = $row['itemdesc'];
+        $trueimg = $row['imgname'];
 
-$itemname = $xmlDoc ->getElementsByTagName("itemname");
-$itemvalue = $xmlDoc ->getElementsByTagName("itemvalue");
-$itemdescription = $xmlDoc ->getElementsByTagName("itemdescription");
-$itemicon = $xmlDoc->getElementsByTagName("itemicon");
+?>
+<div class="itembox">
+        <table><?php
+            $print =
+                '<tr><td width="140px"><div class="shoppinglist"><img style="vertical-align:top" src="../images/' . $trueimg . '"></div></td>
+                <td><h1>' . $truename . '</h1><br>'
+                . $truedesc .
+                '<h2>' . $truevalue . " Kr" .'</h2><br></td>';
+
+            echo $print;
+            ?>
+    </tr></table></div>
+<?php
+
+
+    }
 
 
 
+}
+else {
 
-for($i=0; $i<$itemname->length;$i++) {
-    ?><div class="itembox">
-    <table><?php
-        $print =
-            '<tr><td width="140px"><div class="shoppinglist"><img style="vertical-align:top" src="../images/' . $itemicon[$i]->nodeValue . '"></div></td>
+
+    $xmlDoc = new DOMDocument();
+    $xmlDoc->load("../xml/itemlist.xml");
+
+    $itemname = $xmlDoc->getElementsByTagName("itemname");
+    $itemvalue = $xmlDoc->getElementsByTagName("itemvalue");
+    $itemdescription = $xmlDoc->getElementsByTagName("itemdescription");
+    $itemicon = $xmlDoc->getElementsByTagName("itemicon");
+
+
+    for ($i = 0; $i < $itemname->length; $i++) {
+        ?>
+        <div class="itembox">
+        <table><?php
+            $print =
+                '<tr><td width="140px"><div class="shoppinglist"><img style="vertical-align:top" src="../images/' . $itemicon[$i]->nodeValue . '"></div></td>
             <td><h1>' . $itemname[$i]->nodeValue . '</h1><br>'
-            . $itemdescription[$i]->nodeValue .
-            '<h2>' . $itemvalue[$i]->nodeValue . '</h2><br></td>';
+                . $itemdescription[$i]->nodeValue .
+                '<h2>' . $itemvalue[$i]->nodeValue . '</h2><br></td>';
 
-        echo $print;
-    ?>
-        </tr></table></div>
-    <?php
+            echo $print;
+            ?>
+            </tr></table></div>
+        <?php
+    }
 }
 ?>
 </div>
