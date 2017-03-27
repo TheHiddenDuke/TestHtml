@@ -62,7 +62,7 @@ else{
 
 </div>
 <?php
-if ($_POST['item'] == "data"){
+if (isset($_POST['item']) && $_POST['item'] == "data"){
     $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
     $conn = "SELECT * FROM items";
     $result = $mysqli->query($conn);
