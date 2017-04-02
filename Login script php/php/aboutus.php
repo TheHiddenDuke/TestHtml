@@ -7,10 +7,10 @@
 <body>
 <div class="banner"></div>
 
-
+<!-- Check if user is logged in -->
+<!-- Change the nav-bar dependent if the user is logged in and/or if the user is an administrator -->
 <?php
 session_start();
-
 
 if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
 
@@ -55,7 +55,7 @@ if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
 }
 ?>
 
-
+<!-- Headline of the page -->
 <div class="mainbox">
     <div class="text">
 
@@ -64,13 +64,14 @@ if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
     </div>
 </div>
 
+<!-- Logout box -->
 <?php
-
 if($_SESSION['isloggedin'] == true){
     include 'logoutbox.php';
 }
 else{
 ?>
+<!-- Login box -->
 <div class="rightWrapper">
     <div class="loginbox">
         <tr>

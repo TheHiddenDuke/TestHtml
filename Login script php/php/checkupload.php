@@ -80,7 +80,8 @@ if ($uploadOk == 0) {
         $mysqli_reg = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
 
 
-        $conn = "INSERT INTO items (`itemname`, `itemvalue`) VALUES ('$name', '$cost')";
+
+        $conn = "INSERT INTO items (`itemname`, `itemvalue`, `itemdesc`, `imgname`) VALUES ('$name', '$cost', '$description', '$filename')";
 
         $result = $mysqli_reg->query($conn);
 

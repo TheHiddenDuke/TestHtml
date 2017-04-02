@@ -1,8 +1,9 @@
 <?php
-
+//Open xml file
 $xmlDoc = new DOMDocument();
 $xmlDoc->load("../xml/itemlist.xml");
 
+//Look for the desired item
 $itemname = $xmlDoc->getElementsByTagName("itemname");
 
 

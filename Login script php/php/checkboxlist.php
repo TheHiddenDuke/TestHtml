@@ -7,7 +7,7 @@
  */
 
 ?>
-
+<!-- previously fetched a list of all items, here they are put into a checkbox list -->
 <form method="post" id="shoppinglist" action="buypage.php">
     <div class="rightWrapper">
         <div class="rightBottom">

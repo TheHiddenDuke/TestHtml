@@ -13,10 +13,5 @@
         <itemicon>content2.png</itemicon>
 
     </item>
-    <item xml:id="Apple">
-        <itemname>Apple</itemname>
-        <itemvalue>6 Kr</itemvalue>
-        <itemdescription>Apple from the Garden of Eden</itemdescription>
-        <itemicon>content0.png</itemicon>
-    </item>
-<item><itemname>Banana</itemname><itemvalue>3 Kr</itemvalue><itemdescription>A banana from the famous terrorist osama bin laden</itemdescription><itemicon>content1.png</itemicon></item></itemlist>
+    
+<item><itemname>Banana</itemname><itemvalue>3 Kr</itemvalue><itemdescription>A banana from the famous terrorist osama bin laden</itemdescription><itemicon>content1.png</itemicon></item><item><itemname>Apple</itemname><itemvalue>6 Kr</itemvalue><itemdescription>Apple from the Garden of Magnus</itemdescription><itemicon>content0.png</itemicon></item></itemlist>

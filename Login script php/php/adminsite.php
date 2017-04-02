@@ -16,7 +16,7 @@
     <body>
     <div class="banner"></div>
 
-
+<!-- Nav bar -->
     <ul>
         <li class="active"><a href="mainpage.php">Home</a></li>
         <li><a href="shop.php">Shop</a></li>
@@ -26,28 +26,25 @@
         <li><a href="contactus.php">Contact</a></li>
         <li><a href="aboutus.php">About</a></li>
     </ul>
-
+<!-- Headline for the page -->
     <div class="mainbox">
         <div class="text">
             <?php
             echo "Welcome, " . $_SESSION['username'] . ", to administrative site!";
             ?>
         </div>
-
-
     </div>
+    <!-- Logout box -->
     <?php include 'logoutbox.php'; ?>
     </body>
     </html>
 
-
+<!-- Query for item name and values -->
 <?php
-//Query after item name and values
-
 $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
 $result = $mysqli->query("SELECT itemname FROM items");
-//Checkbox list
 
+//Checkbox list
 include 'checkboxlist.php';
 
 $mysqli->close();

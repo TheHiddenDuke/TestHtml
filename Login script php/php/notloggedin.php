@@ -30,7 +30,7 @@
 </div>
 <div class="rightWrapper">
     <div class="loginbox">
-    <tr>
+    <tr>x
         <form name="form1" method="post" action="checklogin.php">
             <td>
                 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#f2f2f2">

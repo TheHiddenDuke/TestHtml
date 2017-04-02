@@ -6,6 +6,9 @@
  * Time: 11:11
  */
 
+// The unfinished checkout page, accessed by the checkbox list from either the home page or the shop page.
+
+//query for itemname and comparing to the itemname's checked from the checkboxlist. Add the prices together and echo out.
 $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
 $result = $mysqli->query("SELECT itemname FROM items");
 $sum = 0;
@@ -20,7 +23,7 @@ while ($name = mysqli_fetch_assoc($result)) {
 }
 echo "Your total price is: ", $sum;
 ?>
-
+<!-- A form to get back to mainpage -->
 <form name="form1" method="post" action="mainpage.php">
     <td>
         <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
