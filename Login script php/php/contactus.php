@@ -10,7 +10,7 @@
 <?php
 session_start();
 
-
+//Nav bar changes dependent if the user is admin, just a member or not logged in
 if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
 
     ?>
@@ -26,7 +26,7 @@ if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
     </ul>
 
 <?php
-
+//If user is logged in, but not admin
 } else if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 0) {
 
     ?>
@@ -65,46 +65,16 @@ if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
     </div>
 </div>
 
-
 <?php
 
+// If user is logged in, the logoutbox shows
 if($_SESSION['isloggedin'] == true){
     include 'logoutbox.php';
 }
 else{
     ?>
-    <div class="rightWrapper">
-    <div class="loginbox">
-    <tr>
-        <form name="form1" method="post" action="checklogin.php">
-            <td>
-                <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#f2f2f2">
-                    <tr>
-                        <td colspan="3"><strong>Member Login </strong></td>
-                    </tr>
-                    <tr>
-                        <td width="78">Username</td>
-                        <td width="6">:</td>
-                        <td width="294"><input name="username" placeholder="Username" type="text" id="username"></td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td>:</td>
-                        <td><input name="password" placeholder="Password" type="password" id="password"></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td><input type="submit" name="Submit" value="Login">
-                            <input type="submit" name="Register" value="Register">
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </form>
-    </tr>
-</div>
-</div>
-<?php
+<!-- If user is not logged in, the Login box shows -->
+
+<?php include'loginbox.php';
 }
 ?>

@@ -1,5 +1,5 @@
-<?php ?>
 
+<!-- The logout box -->
 <div class="rightWrapper">
     <div class="loginbox">
         <tr>

@@ -1,4 +1,6 @@
 <?php
+
+//Footer used for mainpage, sorted by if the user is an admin, a normal user or not logged in
 if ($_SESSION['isadmin'] == "1" && isset($_SESSION['isloggedin']) == true) {
     ?>
     <ul class="footer">

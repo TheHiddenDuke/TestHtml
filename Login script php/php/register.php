@@ -15,8 +15,9 @@
 </head>
 <body>
 <div class="banner">
-
 </div>
+
+<!-- A form for registration of a new user -->
 <div class="centerdiv">
 <div class="registerbox">
         <form name="form1" method="post" action="checkregister.php">

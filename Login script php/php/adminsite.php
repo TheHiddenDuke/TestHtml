@@ -44,7 +44,7 @@
 $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
 $result = $mysqli->query("SELECT itemname FROM items");
 
-//Checkbox list
+//Checkbox list, 'quick shop'
 include 'checkboxlist.php';
 
 $mysqli->close();

@@ -1,15 +1,16 @@
 <?php
-
+//Goes to mainpage if back button was pressed
 if (isset($_POST['back'])) {
     header("location:mainpage.php");
 }
 
-
+//Find file path and file.
 $target_dir = "../images/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
+//Find the file type
 $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
-// Check if image file is a actual image or fake image
+// Check if image file is an actual image or fake image
 if (isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
     if ($check !== false) {
@@ -55,12 +56,13 @@ if ($uploadOk == 0) {
     // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-
+    //if file was successfully uploaded, get item information ready
         $name = $_POST['name'];
         $cost = $_POST['price'];
         $description = htmlspecialchars($_POST['desc']);
         $filename = basename($_FILES["fileToUpload"]["name"]);
 
+        //open xml file, add all information for the new item
         $xmlDoc = new DOMDocument();
         $xmlDoc->load("../xml/itemlist.xml");
 
@@ -76,16 +78,14 @@ if ($uploadOk == 0) {
         $newItem->addChild("itemicon", $filename);
         $sxe->asXML("../xml/itemlist.xml");
 
-
+        //Set up connection to database and add a new row in the item table with the new items' information
         $mysqli_reg = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
-
-
 
         $conn = "INSERT INTO items (`itemname`, `itemvalue`, `itemdesc`, `imgname`) VALUES ('$name', '$cost', '$description', '$filename')";
 
         $result = $mysqli_reg->query($conn);
 
-
+        //The file and information was added
         echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
         ?>
         <form action="mainpage.php" method="post">
@@ -93,7 +93,9 @@ if ($uploadOk == 0) {
         </form>
 
         <?php
-    } else {
+    }
+    //something went wrong somewhere
+    else {
         echo "Sorry, there was an error uploading your file.";
         ?>
         <form action="mainpage.php" method="post">

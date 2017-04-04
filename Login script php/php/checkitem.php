@@ -10,6 +10,7 @@ $itemname = $xmlDoc->getElementsByTagName("itemname");
 for ($i = 0; $i < $itemname->length; $i++) {
 
     if ($itemname[$i]->nodeValue == $_POST['item']) {
+        //Once item is found, remove node
         $root = $xmlDoc->documentElement;
         $currentNode = $root->getElementsByTagName('item')->item($i);
         $deletedNode = $root->removeChild($currentNode);
@@ -17,7 +18,7 @@ for ($i = 0; $i < $itemname->length; $i++) {
         $name = $_POST['item'];
         echo $xmlDoc->save("../xml/itemlist.xml");
 
-
+        //Remove item from database
         $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
 
         $conn = "DELETE FROM items WHERE itemname='$name'";

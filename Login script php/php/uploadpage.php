@@ -22,17 +22,18 @@
 
     <div class="text">
         <?php
+        //Page only available for admins, other user will be directed to the mainpage
         session_start();
         if ($_SESSION['isadmin'] == true) {
 
         } else {
             header("location:mainpage.php");
         }
-
+        //Headline
         echo "Please input the needed information!";
         ?>
     </div>
-
+<!-- A form for user to input information on a new product -->
     <div class="itembox">
         <form action="checkupload.php" method="post" enctype="multipart/form-data">
 

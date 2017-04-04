@@ -8,7 +8,7 @@
 
 <div class="banner"></div>
 
-<!--Navbar top-->
+<!--Nav bar, Change depending if the user is an admin or not-->
 <?php
 session_start();
 if($_SESSION['isadmin'] == true){
@@ -24,6 +24,7 @@ if($_SESSION['isadmin'] == true){
 </ul>
 <?php
 }
+//If user is not an admin
 else{
     ?>
     <ul>
@@ -51,7 +52,7 @@ else{
     <br>
     <input type="submit" value="Submit">
     </form>
-
+<!-- Headline -->
 <div class="text">
     <?php
     if($_SESSION['isloggedin']==true) {
@@ -59,10 +60,11 @@ else{
     }
     else{header("location:mainpage.php");}
     ?>
-
 </div>
 <?php
+//If the user chose to view from database
 if (isset($_POST['item']) && $_POST['item'] == "data"){
+    //Fetch all information from database
     $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
     $conn = "SELECT * FROM items";
     $result = $mysqli->query($conn);
@@ -74,8 +76,10 @@ if (isset($_POST['item']) && $_POST['item'] == "data"){
         $trueimg = $row['imgname'];
 
 ?>
+        <!-- Set up the list of items on the shopping page -->
 <div class="itembox">
         <table><?php
+
             $print =
                 '<tr><td width="140px"><div class="shoppinglist"><img style="vertical-align:top" src="../images/' . $trueimg . '"></div></td>
                 <td><h1>' . $truename . '</h1><br>'
@@ -86,16 +90,12 @@ if (isset($_POST['item']) && $_POST['item'] == "data"){
             ?>
     </tr></table></div>
 <?php
-
-
     }
-
-
-
 }
+//if the user chose to view from the xml file
 else {
 
-
+//open xml file, fetch all item information
     $xmlDoc = new DOMDocument();
     $xmlDoc->load("../xml/itemlist.xml");
 
@@ -104,7 +104,7 @@ else {
     $itemdescription = $xmlDoc->getElementsByTagName("itemdescription");
     $itemicon = $xmlDoc->getElementsByTagName("itemicon");
 
-
+    //Set up the list of items on the shopping page
     for ($i = 0; $i < $itemname->length; $i++) {
         ?>
         <div class="itembox">
@@ -135,7 +135,7 @@ else {
 
 $mysqli = new mysqli("localhost", "root", "heihei", "innlogging") or die("cannot connect");
 $result = $mysqli->query("SELECT itemname FROM items");
-//Checkbox list
+//Checkbox list,'quick shop'
 
 include 'checkboxlist.php';
 include'footershop.php';

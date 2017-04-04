@@ -1,6 +1,7 @@
+
+<!-- Footer for the item modify page-->
 <?php
 if (isset($_SESSION['isadmin']) == true) {
-
     ?>
     <ul class="footer">
         <li><a href="mainpage.php">Home</a></li>

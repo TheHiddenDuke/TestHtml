@@ -1,4 +1,5 @@
 
+<!-- Footer for the item deletion page -->
 <?php
 if(isset($_SESSION['isadmin']) == true){
 

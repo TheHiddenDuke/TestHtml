@@ -9,13 +9,14 @@
 </html>
 <?php
 session_start();
-//If user is logged in
-
+    //If user is logged in as admin
 
 if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
 
     include 'adminsite.php';
     include 'footer.php';
+
+    //If user is logged in as member
 
 } else if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 0) {
 

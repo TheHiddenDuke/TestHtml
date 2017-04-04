@@ -1,3 +1,5 @@
+
+<!-- Footer for the uploading new item page -->
 <ul class="footer">
     <li><a href="mainpage.php">Home</a></li>
     <li><a href="shop.php">Shop</a></li>

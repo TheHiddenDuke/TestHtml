@@ -1,12 +1,12 @@
 <?php
 session_start();
-
+// Page only available for admings, user get's directed to mainpage if they are not an admin
 if ($_SESSION['isadmin'] == true) {
 
 } else {
     header("location:mainpage.php");
 }
-
+//Open xml doc, fetch information of all items
 $xmlDoc = new DOMDocument();
 $xmlDoc->load("../xml/itemlist.xml");
 
@@ -20,7 +20,7 @@ $itemicon = $xmlDoc->getElementsByTagName("itemicon");
 <header>
     <link rel="stylesheet" href="../css/style.css">
     <div class="banner"></div>
-
+<!-- Nav bar -->
     <ul>
         <li><a href="mainpage.php">Home</a></li>
         <li><a href="shop.php">Shop</a></li>
@@ -33,16 +33,16 @@ $itemicon = $xmlDoc->getElementsByTagName("itemicon");
 
 </header>
 <body>
-<div class="mainbox">
 
+<!-- Headline -->
+<div class="mainbox">
     <div class="text">
         <?php
-
         echo "Please select product!";
-
         ?>
     </div>
 
+<!-- Make a checkbox list from the itemname -->
     <div class="text">
         <form name="form1" method="post" action="checkitem.php">
             <select name="item">

@@ -5,7 +5,7 @@
 </head>
 
 <?php
-
+//open XML document, fetching all data that match with the name that was sent with
 
 $xmlDoc = new DOMDocument();
 $xmlDoc->load("../xml/itemlist.xml");
@@ -41,6 +41,7 @@ $costint = filter_var($itemvalue[0]->nodeValue, FILTER_SANITIZE_NUMBER_INT);
 
     <div class="text">
         <?php
+        //This is a page only usable for admins, if they are not an admin they will be moved to the mainpage
         session_start();
         if ($_SESSION['isadmin'] == true) {
 
@@ -50,10 +51,9 @@ $costint = filter_var($itemvalue[0]->nodeValue, FILTER_SANITIZE_NUMBER_INT);
 
         echo "Please input the needed information!";
 
-
         ?>
     </div>
-
+                                        <!-- Setting up a form to show the items information -->
     <div class="itembox">
         <form action="changemodify.php" method="post" enctype="multipart/form-data">
 
@@ -106,6 +106,5 @@ $costint = filter_var($itemvalue[0]->nodeValue, FILTER_SANITIZE_NUMBER_INT);
 <?php
 
 include 'logoutbox.php';
-
 include 'footermodify.php';
 ?>

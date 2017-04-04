@@ -1,12 +1,13 @@
 <?php
 session_start();
-
+//Page only available for admins, user get directed to mainpage if they are not an admin
 if ($_SESSION['isadmin'] == true) {
 
 } else {
     header("location:mainpage.php");
 }
 
+//Open xml doc, fetching all item information
 $xmlDoc = new DOMDocument();
 $xmlDoc->load("../xml/itemlist.xml");
 
@@ -21,6 +22,7 @@ $itemicon = $xmlDoc->getElementsByTagName("itemicon");
     <link rel="stylesheet" href="../css/style.css">
     <div class="banner"></div>
 
+    <!-- Nav bar -->
     <ul>
         <li><a href="mainpage.php">Home</a></li>
         <li><a href="shop.php">Shop</a></li>
@@ -33,9 +35,8 @@ $itemicon = $xmlDoc->getElementsByTagName("itemicon");
 
 </header>
 <body>
+<!-- Headline -->
 <div class="mainbox">
-
-
     <div class="text">
         <?php
 
@@ -43,7 +44,7 @@ $itemicon = $xmlDoc->getElementsByTagName("itemicon");
 
         ?>
     </div>
-
+<!-- Checkbox list of all items -->
     <div class="text">
         <form name="form1" method="post" action="checkmodify.php">
             <select name="item">

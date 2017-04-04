@@ -1,3 +1,5 @@
+
+<!-- Footer for the shopping page, sorted by if they are an admin or not -->
 <?php
 if ($_SESSION['isadmin'] == true) {
     ?>
