@@ -9,7 +9,10 @@
 </html>
 <?php
 session_start();
+
     //If user is logged in as admin
+if(isset($_SESSION['isloggedin'])){
+
 
 if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
 
@@ -24,6 +27,7 @@ if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
     include 'footer.php';
 
     //If user is not logged in
+}
 } else {
 
 

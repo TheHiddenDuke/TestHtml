@@ -11,6 +11,7 @@
 session_start();
 
 //Nav bar changes dependent if the user is admin, just a member or not logged in
+if(isset($_SESSION['isloggedin'])){
 if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
 
     ?>
@@ -39,6 +40,7 @@ if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
     </ul>
 
 <?php
+}
     //If user is not logged in
 } else {
 

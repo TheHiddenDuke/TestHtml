@@ -11,7 +11,7 @@
 <!-- Change the nav-bar dependent if the user is logged in and/or if the user is an administrator -->
 <?php
 session_start();
-
+if(isset($_SESSION['isloggedin'])){
 if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
 
     ?>
@@ -40,6 +40,7 @@ if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
     </ul>
 
     <?php
+}
     //If user is not logged in
 } else {
 
@@ -66,8 +67,10 @@ if ($_SESSION['isloggedin'] == true && $_SESSION['isadmin'] == 1) {
 
 <!-- Logout box -->
 <?php
-if($_SESSION['isloggedin'] == true){
-    include 'logoutbox.php';
+if(isset($_SESSION['isloggedin'])){
+    if ($_SESSION['isloggedin'] == true) {
+        include 'logoutbox.php';
+    }
 }
 else{
 ?>

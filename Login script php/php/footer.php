@@ -1,6 +1,8 @@
 <?php
 
 //Footer used for mainpage, sorted by if the user is an admin, a normal user or not logged in
+if(isset($_SESSION['isloggedin'])){
+
 if ($_SESSION['isadmin'] == "1" && isset($_SESSION['isloggedin']) == true) {
     ?>
     <ul class="footer">
@@ -27,6 +29,7 @@ if ($_SESSION['isadmin'] == "1" && isset($_SESSION['isloggedin']) == true) {
 
 
     <?php
+}
 } else {
     ?>
 
